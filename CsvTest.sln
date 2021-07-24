@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvTest", "CsvTest\CsvTest.csproj", "{1E907406-335D-4C0F-8C68-59D0B98FBFFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvTest", "CsvTest\CsvTest.csproj", "{4D27ABD9-A047-430B-9663-E8087D7CAB83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1E907406-335D-4C0F-8C68-59D0B98FBFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E907406-335D-4C0F-8C68-59D0B98FBFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E907406-335D-4C0F-8C68-59D0B98FBFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E907406-335D-4C0F-8C68-59D0B98FBFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D27ABD9-A047-430B-9663-E8087D7CAB83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D27ABD9-A047-430B-9663-E8087D7CAB83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D27ABD9-A047-430B-9663-E8087D7CAB83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D27ABD9-A047-430B-9663-E8087D7CAB83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BE391B4D-9DAD-43C0-9301-91B5482C1DFB}
+		SolutionGuid = {4EF2AB53-A527-408E-90D8-5487F26F4D48}
 	EndGlobalSection
 EndGlobal
