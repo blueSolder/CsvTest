@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Linq;
 using CsvHelper;
 using System.IO;
-using System.Net;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace CsvTest
@@ -20,10 +20,17 @@ namespace CsvTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (var csv in Directory.GetFiles(GetFilesPath()))
+            var path = GetFilesPath();
+
+            foreach (var csv in Directory.GetFiles(path + "Csvs"))
             {
-                var poco =PocoFromCsv.DoIt(csv);
-                File.WriteAllText(@"D:\temp\MakePocos\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs", poco );
+                var x = Path.GetExtension(csv);
+                if (Path.GetExtension(csv) == ".csv")
+                {
+                    var poco = PocoFromCsv.DoIt(csv);
+                    var savePath = path + @"\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs";
+                    File.WriteAllText(path + @"\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs", poco);
+                }
             }
 
             
@@ -35,9 +42,10 @@ namespace CsvTest
 
         private string GetFilesPath()
         {
-            string execPath = Assembly.GetEntryAssembly().Location;
+            var strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var strWorkPath = System.IO.Path.GetDirectoryName(strExeFilePath);
 
-            return Path.Combine(execPath = @"MakePocos\Csvs");
+            return Path.Combine(strWorkPath, @"MakePocos\");
         }
     }
 }
