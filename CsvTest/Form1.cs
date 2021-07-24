@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CsvHelper;
+using System.IO;
+using System.Net;
 using System.Windows.Forms;
 
 namespace CsvTest
@@ -17,5 +18,26 @@ namespace CsvTest
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (var csv in Directory.GetFiles(GetFilesPath()))
+            {
+                var poco =PocoFromCsv.DoIt(csv);
+                File.WriteAllText(@"D:\temp\MakePocos\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs", poco );
+            }
+
+            
+
+            var a = CsvToPoco.Parse<MagicMillionsCsv, MagicMillionsCsvMap>(@"D:\temp\MakePocos\Csvs\MagicMillions.csv");
+
+            
+        }
+
+        private string GetFilesPath()
+        {
+            string execPath = Assembly.GetEntryAssembly().Location;
+
+            return Path.Combine(execPath = @"MakePocos\Csvs");
+        }
     }
 }
