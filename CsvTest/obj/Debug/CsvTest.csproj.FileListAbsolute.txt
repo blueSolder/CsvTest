@@ -20,7 +20,6 @@ C:\Users\dave\source\repos\CsvTest\CsvTest\bin\Debug\System.Memory.xml
 C:\Users\dave\source\repos\CsvTest\CsvTest\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\dave\source\repos\CsvTest\CsvTest\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\dave\source\repos\CsvTest\CsvTest\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.csprojAssemblyReference.cache
 C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.Form1.resources
 C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.Properties.Resources.resources
 C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.csproj.GenerateResource.cache
@@ -28,3 +27,7 @@ C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.csproj.CoreCompileI
 C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.csproj.CopyComplete
 C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.exe
 C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.pdb
+C:\Users\dave\source\repos\CsvTest\CsvTest\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\dave\source\repos\CsvTest\CsvTest\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\dave\source\repos\CsvTest\CsvTest\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\dave\source\repos\CsvTest\CsvTest\obj\Debug\CsvTest.csproj.AssemblyReference.cache

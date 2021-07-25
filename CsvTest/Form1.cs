@@ -22,6 +22,12 @@ namespace CsvTest
         {
             var path = GetFilesPath();
 
+
+            
+
+
+            
+
             foreach (var csv in Directory.GetFiles(path + "Csvs"))
             {
                 var x = Path.GetExtension(csv);
@@ -30,6 +36,13 @@ namespace CsvTest
                     var poco = PocoFromCsv.DoIt(csv);
                     var savePath = path + @"\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs";
                     File.WriteAllText(path + @"\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs", poco);
+                }
+
+                if (Path.GetExtension(csv) == ".xls" || Path.GetExtension(csv) == ".xlsx")
+                {
+                    ExcelToPoco.Doit(csv);
+
+
                 }
             }
 
