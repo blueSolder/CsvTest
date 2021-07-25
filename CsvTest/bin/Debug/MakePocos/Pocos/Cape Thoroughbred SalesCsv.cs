@@ -1,8 +1,8 @@
 using CsvHelper.Configuration;
 
-namespace CsvTest
+namespace TW_CsvGrabber
 {
-	public class Cape Thoroughbred SalesCsv
+	public class CapeThoroughbredSalesCsv
 	{
 		public string Lot { get; set; }
 		public string Name { get; set; }
@@ -14,9 +14,9 @@ namespace CsvTest
 		public string Amount { get; set; }
 	}
 
-	public sealed class Cape Thoroughbred SalesCsvMap : ClassMap<Cape Thoroughbred SalesCsv>
+	public sealed class CapeThoroughbredSalesCsvMap : ClassMap<CapeThoroughbredSalesCsv>
 {
-		public Cape Thoroughbred SalesCsvMap()
+		public CapeThoroughbredSalesCsvMap()
 		{
 			Map(m => m.Lot).Name("Lot");
 			Map(m => m.Name).Name("Name");

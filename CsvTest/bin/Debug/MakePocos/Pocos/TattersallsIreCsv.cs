@@ -1,6 +1,6 @@
 using CsvHelper.Configuration;
 
-namespace CsvTest
+namespace TW_CsvGrabber
 {
 	public class TattersallsIreCsv
 	{
@@ -19,7 +19,7 @@ namespace CsvTest
 		public string CoveredBy { get; set; }
 		public string Consignor { get; set; }
 		public string Purchaser { get; set; }
-		public string Price(€) { get; set; }
+		public string Price { get; set; }
 		public string Stabling { get; set; }
 	}
 
@@ -42,7 +42,7 @@ namespace CsvTest
 			Map(m => m.CoveredBy).Name("Covered by");
 			Map(m => m.Consignor).Name("Consignor");
 			Map(m => m.Purchaser).Name("Purchaser");
-			Map(m => m.Price(€)).Name("Price (€)");
+			Map(m => m.Price).Name("Price");
 			Map(m => m.Stabling).Name("Stabling");
 
 		}

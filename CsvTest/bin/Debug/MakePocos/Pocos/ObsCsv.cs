@@ -1,10 +1,10 @@
 using CsvHelper.Configuration;
 
-namespace CsvTest
+namespace TW_CsvGrabber
 {
 	public class ObsCsv
 	{
-		public string Hip# { get; set; }
+		public string Hip { get; set; }
 		public string Name { get; set; }
 		public string Color { get; set; }
 		public string Sex { get; set; }
@@ -31,7 +31,7 @@ namespace CsvTest
 {
 		public ObsCsvMap()
 		{
-			Map(m => m.Hip#).Name("hip#");
+			Map(m => m.Hip).Name("hip");
 			Map(m => m.Name).Name("Name");
 			Map(m => m.Color).Name("Color");
 			Map(m => m.Sex).Name("Sex");

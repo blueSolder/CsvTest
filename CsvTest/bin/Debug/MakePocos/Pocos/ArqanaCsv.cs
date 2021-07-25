@@ -1,6 +1,6 @@
 using CsvHelper.Configuration;
 
-namespace CsvTest
+namespace TW_CsvGrabber
 {
 	public class ArqanaCsv
 	{
@@ -12,7 +12,7 @@ namespace CsvTest
 		public string Père { get; set; }
 		public string Mère { get; set; }
 		public string Vendeur { get; set; }
-		public string Cour/Box { get; set; }
+		public string CourBox { get; set; }
 		public string Suffixe { get; set; }
 		public string SuffixePère { get; set; }
 		public string SuffixeMère { get; set; }
@@ -35,7 +35,7 @@ namespace CsvTest
 			Map(m => m.Père).Name("Père");
 			Map(m => m.Mère).Name("Mère");
 			Map(m => m.Vendeur).Name("Vendeur");
-			Map(m => m.Cour/Box).Name("Cour / Box");
+			Map(m => m.CourBox).Name("Cour  Box");
 			Map(m => m.Suffixe).Name("Suffixe");
 			Map(m => m.SuffixePère).Name("Suffixe Père");
 			Map(m => m.SuffixeMère).Name("Suffixe Mère");

@@ -1,6 +1,6 @@
 using CsvHelper.Configuration;
 
-namespace CsvTest
+namespace TW_CsvGrabber
 {
 	public class InglissCsv
 	{

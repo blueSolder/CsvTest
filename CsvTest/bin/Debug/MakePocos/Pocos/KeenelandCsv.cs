@@ -1,6 +1,6 @@
 using CsvHelper.Configuration;
 
-namespace CsvTest
+namespace TW_CsvGrabber
 {
 	public class KeenelandCsv
 	{
@@ -18,7 +18,7 @@ namespace CsvTest
 		public string CoveringSire { get; set; }
 		public string SoldAs { get; set; }
 		public string Consignor { get; set; }
-		public string Barn(S) { get; set; }
+		public string Barns { get; set; }
 		public string Session { get; set; }
 		public string Book { get; set; }
 		public string Out { get; set; }
@@ -43,7 +43,7 @@ namespace CsvTest
 			Map(m => m.CoveringSire).Name("Covering Sire");
 			Map(m => m.SoldAs).Name("Sold As");
 			Map(m => m.Consignor).Name("Consignor");
-			Map(m => m.Barn(S)).Name("Barn(s)");
+			Map(m => m.Barns).Name("Barns");
 			Map(m => m.Session).Name("Session");
 			Map(m => m.Book).Name("Book");
 			Map(m => m.Out).Name("Out");
