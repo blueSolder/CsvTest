@@ -7,11 +7,12 @@ namespace CsvTest
 {
     public class PocoFromCsv
     {
-        public static string DoIt(string path)
+        public static string DoIt(string path, string[] csvMem = null)
         {
+            var csv = new string[0];
             var name = Path.GetFileNameWithoutExtension(path);
+            if (path != null) csv = csvMem ?? File.ReadAllLines(path);
 
-            var csv = File.ReadAllLines(path);
             var headers = csv[0];
 
             var colHeaders = headers.Split(new string[] {"\","}, StringSplitOptions.None);

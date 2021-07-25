@@ -21,29 +21,24 @@ namespace CsvTest
         private void Form1_Load(object sender, EventArgs e)
         {
             var path = GetFilesPath();
-
-
-            
-
-
-            
+            var poco = "";
 
             foreach (var csv in Directory.GetFiles(path + "Csvs"))
             {
                 var x = Path.GetExtension(csv);
                 if (Path.GetExtension(csv) == ".csv")
                 {
-                    var poco = PocoFromCsv.DoIt(csv);
-                    var savePath = path + @"\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs";
-                    File.WriteAllText(path + @"\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs", poco);
+                    poco = PocoFromCsv.DoIt(csv);
                 }
 
                 if (Path.GetExtension(csv) == ".xls" || Path.GetExtension(csv) == ".xlsx")
                 {
-                    ExcelToPoco.Doit(csv);
-
-
+                    var csvArr = ExcelToPoco.Doit(csv);
+                    poco = PocoFromCsv.DoIt(csv, csvArr);
                 }
+
+                var savePath = path + @"\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs";
+                File.WriteAllText(path + @"\Pocos\" + Path.GetFileNameWithoutExtension(csv) + "Csv.cs", poco);
             }
 
             

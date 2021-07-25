@@ -35,17 +35,17 @@ namespace CsvTest
             }
         }
 
-        public static string Doit(string filePath)
+        public static string[] Doit(string filePath)
         {
             var reader = Read(filePath);
             var headerRowIndex = FindHeader(reader);
             var csv = ToCsv(reader, headerRowIndex);
 
 
-            return "";
+            return csv;
         }
 
-        private static string ToCsv(DataSet reader, int index)
+        private static string[] ToCsv(DataSet reader, int index)
         {
             var csv = "";
 
@@ -61,17 +61,17 @@ namespace CsvTest
                 
             }
 
-            return csv;
+            return csv.Split('\n');
         }
 
-        private static int FindHeader(DataSet reader)
+        public static int FindHeader(DataSet reader)
         {
-            var columnCounts = new List<int> {0, 0};
+            var columnCounts = new List<int> {0, 0, 0, 0, 0, 0 , 0, 0, 0 };
 
             var headers = reader.Tables[0].Rows[0].ItemArray;
             var rows = reader.Tables[0].Rows;
 
-            for (var i=0; i<2; i++)
+            for (var i=0; i< columnCounts.Count; i++)
             {
                 foreach (var column in reader.Tables[0].Rows[i].ItemArray)
                 {
@@ -79,7 +79,21 @@ namespace CsvTest
                 }
             }
 
-            return columnCounts[0] > columnCounts[1] ? 0 : 1;
+            var headerColumn = 0;
+            var maxColCount = 0;
+
+            //find 1st largest value
+
+            for(var i=0; i< columnCounts.Count; i++)
+            {
+                if (columnCounts[i] > maxColCount)
+                {
+                    headerColumn = i;
+                    maxColCount = columnCounts[i];
+                }
+            }
+
+            return headerColumn;
         }
 
         public static DataSet Read(string filePath)
